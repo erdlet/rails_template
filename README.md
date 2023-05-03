@@ -3,6 +3,8 @@
 This is just a small template I like to use for Rails applications. It doesn't configure any further frameworks like Devise but sets up
 structural and technical base.
 
+To get started, just search for the phrase `template` in the code and replace it where it seems legit (`ci.yml`, `application.rb`, `database.yml`, `docker-compose.yml` ...).
+
 ## Ruby version
 
 Created and tested on Ruby `3.2.0`.
