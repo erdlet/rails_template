@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: <%= ENV.fetch("TEMPLATE_DATABASE_HOST") { "localhost" } %>
+  port: <%= ENV.fetch("TEMPLATE_DATABASE_PORT") { 15432 } %>
+  username: <%= ENV.fetch("TEMPLATE_DATABASE_USERNAME") { "template" } %>
+  password: <%= ENV.fetch("TEMPLATE_DATABASE_PASSWORD") { "template" } %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: template_development
+
+test:
+  <<: *default
+  database: template_test
+
+production:
+  <<: *default
+  database: template
+
